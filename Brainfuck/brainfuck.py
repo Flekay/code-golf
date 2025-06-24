@@ -1,17 +1,5 @@
-import sys
-for a in sys.argv[1:]:
- i=0;t=[0]*99;p=0;l=[];j=0
- while i<len(a):
-  c=a[i]
-  if c==']':
-   k=l.pop()
-   if j==k:j=0
-   elif j<1and t[p]:i=k-1
-  if c=='[':
-   l+=[i]
-   if j<1and t[p]<1:j=i
-  if j:c=0
-  p+=(c=='>')-(c=='<')
-  t[p]+=(c=='+')-(c=='-')
-  if c=='.':print(chr(t[p]),end='')
-  i+=1
+import sys,os
+for s in sys.argv[1:]:
+ P=i='';a,j=[0]*30000,0
+ for c in s:x="><+-.[".find(c);P+=i+("j+=1","j-=1","a[j]+=1","a[j]-=1","os.write(1,bytes([a[j]%256]))","while a[j]:","")[x]+"\n";i=i[c==']':]+' '[c!='[':]
+ exec(P)
