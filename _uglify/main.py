@@ -16,9 +16,18 @@ def find_py_files(root):
                 py_files.append(os.path.join(dirpath, fname))
     return py_files
 
+def delete_min_files(root):
+    # Walk through the project directory and delete .min.py files
+    for dirpath, dirnames, filenames in os.walk(root):
+        for fname in filenames:
+            if fname.endswith('.min.py'):
+                os.remove(os.path.join(dirpath, fname))
+                print(f"Deleted: {os.path.join(dirpath, fname)}")
+
 def main():
     root = os.path.dirname(os.path.abspath(__file__))
     root = os.path.abspath(os.path.join(root, ".."))  # Go up to project root
+    delete_min_files(root)  # Delete old .min.py files before minification
     py_files = find_py_files(root)
     for path in py_files:
         with open(path, encoding='utf-8') as f:
