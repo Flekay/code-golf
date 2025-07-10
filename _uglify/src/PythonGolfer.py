@@ -25,7 +25,9 @@ class PythonGolfer:
         # Try to minify using python_minifier if available
         if python_minifier:
             try:
-                code = python_minifier.minify(code)
+                minified = python_minifier.minify(code)
+                if len(minified) < len(code):
+                    code = minified
             except Exception:
                 pass
         # Remove blank lines and trailing spaces at end of lines
