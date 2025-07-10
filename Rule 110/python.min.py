@@ -1,0 +1,1 @@
+exec(''.join(chr(ord(c)%i+32)for c in'񨛃𝄷󲘛񮓇򐬧𶠧𖥎򬦒񈗜󸵁𷅲𑶑󡯞󄀨򏡻󻢥𠃑𫽜􂶢󋐌򫯩󨑼򛟳𤿩򀱚񮦓󻡈񗃻񘋨񝿿𖥎򂴎񥦔󻓱񘯫𝍪򫯩󻳴𶧎򳯈򗏃᎒𳟔𠞪񎰭󏰪'for i in b'efg').replace('\x7f','\n'))
