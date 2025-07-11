@@ -1,1 +1,1 @@
-exec(''.join(chr(ord(c)%i+32)for c in'󭳋򻚫򽦔𑈠򫯩񯯚󶐹􂶢𑈠򫯩񯯚􀗻𳿩𨏀򴇮𿟷󵴃쿥񀧲𖸼󇕓򨥁혓򃋿𔗋񝛏񉂻򅓥󿟘񀱢񈛉󿟘󺷩򿱑𵖀򠡯򽋠񻱈񊺡򊻫󜗎򒆮􂼅󶸕𖥎񃛸󍪲󀕲򂫨򂴅𺸲𣆴󟉯'for i in b'efg').replace('\x7f','\n'))
+exec(''.join(chr(ord(c)%i+32)for c in'򁩡񤔵򵋣󺣈𗋽󽶳񃑐챯ദ𠩆򸉾𵰝򵹵ͽ𭭣𬑴򿬞ꐱ񼟕𑱼󮯤񧋂󳷷𻴭󻓱򯏯𙂼󆄴󳷷񮘩𣣪􂹴󎠓񘛡󁑐𓱆񳪪򠵰񰣸𗺻򗏃󇿣'for i in b'efg').replace('\x7f','\n'))

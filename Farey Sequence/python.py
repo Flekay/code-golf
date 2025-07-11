@@ -1,7 +1,1 @@
-import math
-f=[]
-for d in range(1,51):
- for n in range(d+1):
-  if math.gcd(n,d)<2:f+=(n,d),
-f.sort(key=lambda z:z[0]/z[1])
-for x in f:print(f'{x[0]}/{x[1]}')
+from fractions import*;print("0/1");*map(print,sorted({Fraction(j,i)for i in range(1,51)for j in range(1,i)})),;print("1/1")

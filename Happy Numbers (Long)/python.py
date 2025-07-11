@@ -1,3 +1,4 @@
-for i in range(1001):
- k=i;exec("k=sum([int(d)**2 for d in'%s'%k]);"*9)
- if k==1:print(i)
+for i in range(1,1001):
+ j=i
+ while 4<i:i=sum(int(c)**2for c in str(i))
+ if i<2:print(j)

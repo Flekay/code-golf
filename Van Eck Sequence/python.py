@@ -1,2 +1,2 @@
-x=[0]
-for _ in x*1000:r=x[-1];print(r);x+=[0if r not in x[:-1]else x[::-1][1:].index(r)+1]
+l=[0]
+while len(l)<1001:print(i:=l[-1]);l+=[l[-2::-1].index(i)+1]if i in l[:-1]else[0]

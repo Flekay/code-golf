@@ -1,39 +1,16 @@
-def justifyWords(words,width):
- s=1
- if len(words)>1 and width>0:
-  c=0
-  for word in words:
-   c+=len(word)
-  s=(width-c)//(len(words)-1)
-  d=width-c-(len(words)-1)*s
-  for n in range(d):
-   words[n]+=' '
- print(*words,sep=s*' ')
-
-def doLine(words,width):
- i=0
- c=-1
- subw = []
- w = ''
- while i < len(words) and c+len(words[i])<width:
-  w = words[i]
-  subw += [w]
-  c += len(w)+1
-  i+=1
- justifyWords(subw,0if len(words)==i else width)
- return words[i:]
-
 import sys
-for arg in sys.argv[1:]:
- lines = arg.split('\n')
- s = lines[0].split(' ')
- indent = int(s[0])
- width = int(s[1])
- n = 1
- for line in lines[1:]:
-  words = line.split(' ')
-  while len(words) > 0:
-   print(indent*' ',end='')
-   words = doLine(words,width)
-   n+=1;indent -= n%2;width += n%2*2
-  n+=1;indent -= n%2;width += n%2*2;print()
+R=str.replace
+Z=print
+B=" "
+for a in sys.argv[1:]:
+	P=lambda:a.pop(0);a=R(a,"\n"," | ").split(B);s=int(P());c=int(P());P()
+	for i in range((s+1)*2):
+		S=""
+		while a and a[0]!="|"and len(S+a[0])<=c:S+=P()+B
+		if S:
+			S=S[:-1]
+			if B in S and a and a[0]!="|":D,M=divmod(c-len(S),S.count(B));p=B*(D+1);S=R(R(S,B,p),p,p+B,M)
+			Z(B*s+S)
+		elif a:Z();P()
+		if i%2:s-=1;c+=2
+	Z()

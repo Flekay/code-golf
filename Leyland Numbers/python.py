@@ -1,1 +1,1 @@
-*map(print,sorted(z for x in range(2,11)for y in range(x,37)if(z:=x**y+y**x)<1e11)),
+r=range(2,99);*map(print,sorted({x**y+y**x for x in r for y in r})[:107]),

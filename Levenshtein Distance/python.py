@@ -1,6 +1,3 @@
 import sys
-for arg in sys.argv[1:]:
- x,y=arg.split();m=len(x)+1;d=[[*range(n:=len(y)+1)]]+[[i] for i in range(1,m)]
- for j in range(1,n):
-  for i in range(1,m):d[i].insert(j,min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+int(x[i-1]!=y[j-1])))
- print(d[-1][-1])
+def l(s,S):i,j=s[:-1],S[:-1];return len(S)if s==""else len(s)if S==""else l(i,j)if s[-1]==S[-1]else 1+min(l(i,S),l(s,j),l(i,j))
+for a in sys.argv[1:]:print(l(*a.split(" ")))
