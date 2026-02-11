@@ -1,2 +1,3 @@
-c={int(''.join(str(q+1)for q in range(9)if i>>q&1))for i in range(2,512)}
-for n in sorted(c):all(n%p for p in range(2,int(n**.5)+1))and print(n)
+s=[0]
+for d in range(9):s+=[10*x-~d for x in s]
+for n in sorted(s[2:]):pow(2,n,n)==2%n!=print(n)
