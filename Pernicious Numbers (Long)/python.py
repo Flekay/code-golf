@@ -1,1 +1,1 @@
-for x in range(10001):n=x.bit_count();n>1==all(n%i for i in range(2,n))==print(x)
+for x in range(10001):10412>>x.bit_count()&1and print(x)

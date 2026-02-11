@@ -1,2 +1,2 @@
-l=[0]
-while len(l)<1001:print(i:=l[-1]);l+=[l[-2::-1].index(i)+1]if i in l[:-1]else[0]
+d={};v=0
+for n in range(1000):print(v);d[v],v=n,n-d[v]if v in d else 0

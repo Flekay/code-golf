@@ -5,5 +5,5 @@ S=[0]*256
 S[0]=99
 for i in range(j:=255):x=t[j-i];x|=x<<8;x^=(x>>4)^(x>>5)^(x>>6)^(x>>7);S[t[i]]=(x^99)&j
 for y in range(16):
- for x in range(16):print(f"{hex(S[16*y+x])[2:]:>02}",end=" ")
+ for x in range(16):print('%02x'%S[16*y+x],end=" ")
  print()

@@ -1,6 +1,6 @@
 import sys;D=divmod
 for a in sys.argv[1:]:
- i,j=[int(o)for o in a.split("/")];i,J=D(i,j);l=[0];L=[str(i)];i=J
+ i,j=map(int,a.split("/"));i,J=D(i,j);l=[0];L=[str(i)];i=J
  if i:l+=[0];L+=["."]
  while i:
   i*=10

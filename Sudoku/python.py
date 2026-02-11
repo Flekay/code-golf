@@ -1,22 +1,18 @@
 R,p=range,print
 def s(g):
- def e():
+ def v(n,w,l):
+  x,y=w//3*3,l//3*3
+  return n not in g[w]and n not in[g[r][l]for r in R(9)]and n not in[g[r][c]for r in R(x,x+3)for c in R(y,y+3)]
+ def b():
   for r in R(9):
    for c in R(9):
-    if g[r][c]<1:return r,c
- def v(n,w,l):
-  if n in g[w]or n in[g[r][l]for r in R(9)]:return
-  x,y=w//3*3,l//3*3
-  if n in[g[r][c]for r in R(x,x+3)for c in R(y,y+3)]:return
+    if g[r][c]<1:
+     for n in R(1,10):
+      if v(n,r,c):
+       g[r][c]=n
+       if b():return 1
+     g[r][c]=0;return
   return 1
- def b():
-  if not e():return 1
-  r,c=e()
-  for n in R(1,10):
-   if v(n,r,c):
-    g[r][c]=n
-    if b():return 1
-    g[r][c]=0
  b()
 import sys
 H,h,U,u,A,B,v='━─┯┷┿┼│';C=' {} '
