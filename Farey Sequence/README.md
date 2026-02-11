@@ -1,0 +1,3 @@
+ The Farey sequence of order n is the sequence of all reduced fractions within the range [0, 1], where each denominator is at most n.
+
+Print the Farey sequence of order 50 in ascending order. The sequence begins 0/1, 1/50, 1/49, ... 

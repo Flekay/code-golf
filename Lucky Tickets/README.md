@@ -1,0 +1,3 @@
+ In Russia, bus ticket numbers consist of 6 decimal digits. It is considered lucky when the sum of the first three digits equals the sum of the last three digits. The concept of lucky tickets can be extended to ticket numbering systems with even numbers of digits and arbitrary bases.
+
+Each argument describes a ticket numbering system and consists of two numbers separated by a space. The first is the even number of digits 2 ≤ d ≤ 14. The second is the base of the numbering system 2 ≤ b ≤ 16. For each argument, output the total number of lucky tickets for the numbering system on a separate line. 
