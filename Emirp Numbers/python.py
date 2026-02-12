@@ -1,1 +1,1 @@
-for i in(R:=range(2,999)):((I:=int(str(i)[::-1]))-i)*all((i%j+(i==j))and((I==j)+I%j)for j in R)and print(i)
+for i in range(2,999):I=int(str(i)[::-1]);(pow(2,i,i)-2)%i or(pow(2,I,I)-2)%I or I==i or print(i)
