@@ -3,4 +3,4 @@ S="cuts📄covers💎crushes🦎poisons🖖smashes✂decapitates🦎eats📄disp
 for c in S:
  if c.isalpha():s+=c
  else:d[p,c]=d[c,p]=p+" "+s+" "+c;p=c;s=""
-for a in sys.argv[1:]:t=tuple(a);print(d[t]if t in d else"Tie")
+for a in sys.argv[1:]:t=*a,;print(d.get(t,"Tie"))

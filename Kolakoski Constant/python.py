@@ -1,5 +1,2 @@
-from decimal import*
-s=[0,1,1]
-[s.extend([1-s[-1]]*(s[i]+1))for i in range(2,2500)]
-getcontext().prec=999
-print(f'{Decimal(int(b:="".join(map(str,s[1:])),2))/2**len(b)}4')
+s=[0,1,1];i=2;exec("s+=[s[-1]^1]*-~s[i];i+=1;"*4**6)
+print(f'0.{int(b:=str(s)[4::3],2)*10**1000>>len(b)}')

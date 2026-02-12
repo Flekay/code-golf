@@ -1,1 +1,1 @@
-t=lambda x:[c+" "*(i+1)+c for i,c in enumerate(t(x-1))]+[" "*2**(x-1)+c for c in t(x-1)]if x else['▲'];*map(print,t(4)[::-1]),
+for r in range(16):print(' '*(15-r)+' '.join(' ▲'[(r|c)<r+1]for c in range(r+1)))

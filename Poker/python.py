@@ -1,2 +1,4 @@
 import sys
-for a in sys.argv[1:]:l=[hex(ord(c))[-2]for c in a];m=[int(hex(ord(c))[-1],16)for c in a];s=sorted([_-1if _>12else _ for _ in m]);A=len(set(l))==1;L=len(set(s));print("Royal Flush"if A and s[0]==1and s[1]==10else"Straight Flush"if A and s[4]==s[0]+4else"Four of a Kind"if s[0]==s[3] or s[1]==s[4]else"Full House"if(s[0]==s[1]and s[2]==s[4])or(s[0]==s[2]and s[3]==s[4])else"Flush"if A else"Straight"if s==[*range(s[0],s[0]+5)]or s==[1,*range(s[1],s[1]+4)]else"Three of a Kind"if s[0]==s[2]or s[1]==s[3]or s[2]==s[4]else"Two Pair"if L==3else"Pair"if L==4else"High Card")
+for a in sys.argv[1:]:
+ s=sorted((r:=ord(c)%16)-(r>12)for c in a);A=len({ord(c)//16for c in a})<2;L=len({*s});ST=L>4and(s[4]-s[0]==4or s[1]-s[0]>8)
+ print((("Royal"if s[1]>9>s[0]else"Straight")+" Flush")if A*ST else("Four of a Kind"if s[1]==s[3]else"Full House")if L<3else"Flush"if A else"Straight"if ST else"Three of a Kind"if s.count(s[2])>2else"Two Pair"if L<4else"Pair"if L<5else"High Card")

@@ -1,3 +1,3 @@
 s=[1,2,2]
-[s.extend([3-s[-1]]*s[i])for i in range(2,1000)]
+for i in range(2,1000):s+=[3-s[-1]]*s[i]
 print(*s[:1000])

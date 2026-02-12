@@ -1,8 +1,4 @@
 import sys
-P=print
 for s in sys.argv[1:]:
-	for i in range(0,len(s),16):
-		P('%08x: '%i,end='')
-		for j in range(i,i+16):P('%02x'%ord(s[j])if j<len(s)else'  ',end=['',' '][j%2])
-		P('',s[i:i+16].replace('\n','.'))
-	P()
+ for i in range(0,len(s),16):c=s[i:i+16];h=c.encode().hex()+' '*32;print('%08x:'%i,' '.join(h[k:k+4]for k in range(0,32,4)),'',c.replace('\n','.'))
+ print()
