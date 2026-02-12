@@ -1,1 +1,2 @@
-for x in range(10001):10412>>x.bit_count()&1and print(x)
+x=0
+while x<1e4:x+=1;5971>>x.bit_count()&1or print(x)

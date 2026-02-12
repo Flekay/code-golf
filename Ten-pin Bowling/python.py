@@ -1,7 +1,7 @@
 import sys
 for a in sys.argv[1:]:
- s=p=j=0;m=[1]*99
+ s=p=j=0;A=B=D=1
  for c in a:
-  if c>' ':m[1]+=c in"X/"and j<27;m[2]+=c=="X"and j<27;c=10if c=='X'else 10-p if c=='/'else int(c)if'/'<c<':'else ord(c)-9311if ord(c)>999else 0;s+=m.pop(0)*c;p=c
+  if c>' ':B+=c in"X/"and j<27;D+=c=="X"and j<27;p=10-p*(c<'X')if c in'X/'else int(c)if'/'<c<':'else ord(c)%9311*(c>'~');s+=A*p;A=B;B=D;D=1
   j+=1
  print(s)

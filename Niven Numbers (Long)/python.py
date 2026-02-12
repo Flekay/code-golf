@@ -1,1 +1,2 @@
-[print(x)for x in range(1,10001)if x%sum(map(int,str(x)))<1]
+x=0
+while x<1e4:x+=1;x%sum(map(int,str(x)))or print(x)

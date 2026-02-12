@@ -1,1 +1,1 @@
-[print(i)for i in range(51)if 44>>i.bit_count()&1]
+for i in range(51):19>>i.bit_count()&1or print(i)

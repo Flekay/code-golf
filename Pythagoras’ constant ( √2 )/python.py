@@ -1,3 +1,2 @@
 from decimal import*
-getcontext().prec=1001
-print(2**Decimal(.5))
+print(Context(1001).sqrt(2))

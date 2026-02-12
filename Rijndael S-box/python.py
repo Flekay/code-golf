@@ -1,9 +1,4 @@
-t=[0]*256
-x=1
-for i in range(256):t[i]=x;x^=(x<<1)^((x>>7)*0x11B)
-S=[0]*256
-S[0]=99
-for i in range(j:=255):x=t[j-i];x|=x<<8;x^=(x>>4)^(x>>5)^(x>>6)^(x>>7);S[t[i]]=(x^99)&j
-for y in range(16):
- for x in range(16):print('%02x'%S[16*y+x],end=" ")
- print()
+j=255;t=[];x=1;exec("t+=x,;x^=x*2^(x>>7)*283;"*256)
+S=[99]+[0]*j
+for i in range(j):S[t[i]]=((x:=t[j-i]*257)^x>>4^x>>5^x>>6^x>>7^99)&j
+for i in range(16):print('%02x '*16%(*S[16*i:][:16],))

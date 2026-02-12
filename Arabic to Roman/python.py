@@ -1,5 +1,2 @@
 import sys
-for i in sys.argv[1:]:
-	s,i='',int(i)
-	for a,r in zip([1000,900,500,400,100,90,50,40,10,9,5,4,1],'M CM D CD C XC L XL X IX V IV I'.split()):s+=i//a*r;i%=a
-	print(s)
+for n in sys.argv[1:]:print(''.join([o*(e:=int(d)),o+f,f+o*(e-5),o+t][e//5*2+e%5//4]for d,o,f,t in zip('%04d'%int(n),'MCXI',' DLV',' MCX')))

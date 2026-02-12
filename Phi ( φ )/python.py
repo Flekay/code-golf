@@ -1,3 +1,2 @@
 from decimal import*
-getcontext().prec=1001
-print((1+Decimal(5).sqrt())/2)
+c=getcontext();c.prec=1001;print((1+c.sqrt(5))/2)

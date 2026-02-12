@@ -1,1 +1,2 @@
-for z in range(1,8):x,y=z*4,z*2;s,h,v,d,c,n=' ─│╱█\n';H,V,D=c+h*x+c,v+s*x+v,d+s*x+d;*map(print,[s*(z+1)+H]+[s*(z-i)+D+s*i+v for i in range(z)]+[H+s*z+v]+[V+s*z+v for _ in[0]*(y-z-1)]+[V+s*z+c]+[V+s*(z-i-1)+d for i in range(y-z)]+[H+n]),
+R=range
+for z in R(1,8):x=z*4;s,h,v,d,c=' ─│╱█';H,V=c+h*x+c,v+s*x+v;*map(print,[s*-~z+H,*[s*(z-i)+d+s*x+d+s*i+v for i in R(z)],H+s*z+v,*[V+s*z+v]*~-z,V+s*z+c,*[V+s*(z+~i)+d for i in R(z)],H,'']),

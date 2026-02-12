@@ -1,2 +1,2 @@
 import sys
-*map(print,[''.join(((U:=" _ ","| |",u:="|_|"),(S:=" "*3,r:="  |",r),(U,R:=" _|",L:="|_ "),(U,R,R),(S,u,r),(U,L,R),(U,L,u),(U,r,r),(U,u,u),(U,u,R))[g][x]for g in map(int,sys.argv[1]))for x in(0,1,2)]),
+for r in"707","123","456":print(''.join(" |_"[b'zG<lMfvH~n'[int(c)]+1>>int(r[j])&1and j%2+1]for c in sys.argv[1]for j in(0,1,2)))
