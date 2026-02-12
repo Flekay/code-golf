@@ -1,2 +1,2 @@
-import codecs,sys
-for a in sys.argv[1:]:print(codecs.encode(a,'rot13'))
+import codecs as c
+for a in c.sys.argv[1:]:print(c.encode(a,'rot13'))
