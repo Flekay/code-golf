@@ -1,2 +1,2 @@
-d={};v=0
-for n in range(1000):print(v);d[v],v=n,n-d.get(v,n)
+d={};v=n=0
+while n<1e3:print(v);d[v],v=n,n-d.get(v,n);n+=1
