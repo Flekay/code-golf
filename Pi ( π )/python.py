@@ -1,5 +1,3 @@
-from decimal import*
-getcontext().prec=1005
-a=p=Decimal(1);b=(a/2).sqrt();t=a/4
-exec('x=(a+b)/2;b=(a*b).sqrt();t-=p*(a-x)**2;a=x;p*=2;'*9)
-print(str((a+b)**2/t/4)[:-4])
+s=p=10**1006;k=0
+while p:k+=1;p=p*k//(k-~k);s+=p
+print('3.'+str(2*s)[1:-6])
