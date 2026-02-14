@@ -1,1 +1,16 @@
-p='Peter Piper';print('How much^ would a^* *,\nIf a^* could *^?\nA^* would * all the^ he could *\nIf a^* would *^.\n\n'.replace('^',' wood').replace('*','chuck')+f"{p}^ed a peck of^led*.\nA peck of^led* {p}^ed.\nIf {p}^ed a peck of^led*,\nWhere's the peck of^led* {p}^ed?\n\n".replace('^',' pick').replace('*',' peppers')+"She s^ *^ by the *ore,\nThe sh^ she s^ are *^, I'm sure.\nSo if she s^ *^ on the *ore,\nThen I'm sure she s^ *ore sh^.".replace('^','ells').replace('*','seash'))
+s='''How much^ would a^* *,
+If a^* could *^?
+A^* would * all the^ he could *
+If a^* would *^.
+
+%#ed a peck of#led&.
+A peck of#led& %#ed.
+If %#ed a peck of#led&,
+Where's the peck of#led& %#ed?
+
+She s! @! by the @ore,
+The sh! she s! are @!, I'm sure.
+So if she s! @! on the @ore,
+Then I'm sure she s! @ore sh!.'''
+for c in zip('^*#&%!@',' wood,chuck, pick, peppers,Peter Piper,ells,seash'.split(',')):s=s.replace(*c)
+print(s)

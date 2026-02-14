@@ -1,10 +1,8 @@
 import sys
-Q=sys.argv[1].split("\n");b={"#":"0"," ":"1"};d={"#":"1"," ":"0"};S=-1;j=20;q=c=""
+Q=sys.argv[1].split("\n");S=-1;j=20;q=""
 for s,e in [(20,8),(9,21)]*2+[(20,-1),(0,21)]+[(12,8),(9,13)]*2:
  for i in range(s,e,S):
   if i==6:continue
-  D,B=[d,b]if(i+j)%2else[b,d];q+=D[Q[i][j]]+B[Q[i][j-1]]
+  p=(i+j)%2;q+=str((Q[i][j]>' ')^1^p)+str((Q[i][j-1]>' ')^p)
  S*=-1;j-=3if j==8else 2
-for b in q[12:148]:
- c+=b
- if len(c)==8:print(chr(int(c,2)),end="");c=""
+for i in range(12,148,8):print(chr(int(q[i:i+8],2)),end="")

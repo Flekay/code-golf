@@ -6,4 +6,4 @@ for l in sys.argv[1:]:
   if p>2:break
   d|=l.index(x)<1and l.count(x)<2
   m[p]+=1;g=x
- print(f"{'1💎 '*d}{m[0]}🥇{f' {m[1]}🥈'if m[1]else''}{f' {m[2]}🥉'if m[2]else''}")
+ print(f"{'1💎 '*d}{m[0]}🥇{f' {m[1]}🥈'*(m[1]>0)}{f' {m[2]}🥉'*(m[2]>0)}")
