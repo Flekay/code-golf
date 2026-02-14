@@ -1,8 +1,6 @@
-import sys
-Q=sys.argv[1].split("\n");S=-1;j=20;q=""
-for s,e in [(20,8),(9,21)]*2+[(20,-1),(0,21)]+[(12,8),(9,13)]*2:
- for i in range(s,e,S):
-  if i==6:continue
-  p=(i+j)%2;q+=str((Q[i][j]>' ')^1^p)+str((Q[i][j-1]>' ')^p)
- S*=-1;j-=3if j==8else 2
-for i in range(12,148,8):print(chr(int(q[i:i+8],2)),end="")
+import sys;S=1;j=22;q=0
+for t in[(20,8),(9,21)]*2+[(20,-1),(0,21)]+[(12,8),(9,13)]*2:
+ S=-S;j-=2+(j==8)
+ for i in range(*t,S):
+  for c in(j,j-1)*(i!=6):q=q*2|(sys.argv[1][22*i+c]>' ')^i+c+1&1
+exec("print(end=chr(q>>188&255));q<<=8;"*17)

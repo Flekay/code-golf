@@ -1,2 +1,5 @@
-import itertools as I,collections as C,sys
-for a in sys.argv[1:]:d,b=map(int,a.split());print(sum(v*v for v in C.Counter(map(sum,I.product(*[range(b)]*(d//2)))).values()))
+import sys
+for a in sys.argv[1:]:
+ d,b=map(int,a.split());d//=2;B=b**d;n=(~-B**b//~-B)**d;s=0
+ while n:s+=(n%B)**2;n//=B
+ print(s)

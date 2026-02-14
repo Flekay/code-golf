@@ -1,16 +1,16 @@
-s='''How much^ would a^* *,
-If a^* could *^?
-A^* would * all the^ he could *
-If a^* would *^.
+s='''How much^ w~a^* *,
++ c~*^?
+A^* w~* all the^ he c~*
++ w~*^.
 
-%#ed a peck of#led&.
-A peck of#led& %#ed.
-If %#ed a peck of#led&,
-Where's the peck of#led& %#ed?
+# a&.
+A& #.
+If # a&,
+Where's the& #?
 
-She s! @! by the @ore,
-The sh! she s! are @!, I'm sure.
-So if she s! @! on the @ore,
-Then I'm sure she s! @ore sh!.'''
-for c in zip('^*#&%!@',' wood,chuck, pick, peppers,Peter Piper,ells,seash'.split(',')):s=s.replace(*c)
+S%!; by :,
+T%h! / are;, $.
+So if /; on :,
+Then $ / @ore sh!.'''
+for c in"+If a^*|/s%!|:the @ore|; @!|^ wood|*chuck|~ould |#Peter Piper picked|& peck of pickled peppers|%he s|$I'm sure|!ells|@seash".split('|'):s=s.replace(c[0],c[1:])
 print(s)

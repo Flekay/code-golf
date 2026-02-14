@@ -1,3 +1,5 @@
 import sys
-F=lambda a,x,y,X,Y,z:0if not(8>x>-1<y<8)or(b:=a[y][x])=="."else z if b=="O"else F(a,x+X,y+Y,X,Y,1)
-for a in sys.argv[1:]:a=a.split();r=range(8);R=range(-1,2);*map(print,["".join("!"if(A:=a[j][i])=="."and any(F(a,i+I,j+J,I,J,0)for I in R for J in R if I or J)else A for i in r)for j in r]+[""]),
+r=range(8)
+R=-1,0,1
+F=lambda x,y,I,J,z:8>x>-1<y<8!=(b:=a[y][x])>"."and(z,F(x+I,y+J,I,J,1))[b>"O"]
+for a in sys.argv[1:]:a=a.split();*map(print,["".join((a[j][i],"!")[a[j][i]<"0"and any(F(i+I,j+J,I,J,0)for I in R for J in R if I|J)]for i in r)for j in r]+[""]),
