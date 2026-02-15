@@ -1,8 +1,6 @@
 from sys import*;setrecursionlimit(9**9);*M,=argv[1]
-I=M.index
 def f(c):
  for d in-52,52,-1,1:
-  if 2651>(n:=c+d)>-1and M[n]in' E':
-   if n==I('E'):exit(print(*M,sep=''))
-   M[n]='.';f(n);M[n]=' '
-f(I('S'))
+  if M[n:=c+d]<'!':M[n]='.';f(n);M[n]=' '
+  if'E'==M[n]:exit(print(*M,sep=''))
+f(M.index('S'))

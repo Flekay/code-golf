@@ -1,5 +1,2 @@
-P=1;s=''
-for k in range(2,1001):
- if P%k:c=0;q=k;exec("c+=1000//q;q*=k;"*9);s+='*%d'%k+"^%d"%c*(c>1)
- P*=k*k
+P=k=1;s='';exec("k+=1\nif P%k:n=1000;c=0;exec('n//=k;c+=n;'*9);s+='*%d'%k+'^%d'%c*(c>1)\nP*=k*k;"*999)
 print(s[1:])

@@ -1,6 +1,2 @@
 import sys
-S="cuts📄covers💎crushes🦎poisons🖖smashes✂decapitates🦎eats📄disproves🖖vaporizes💎crushes✂";d={};p="✂";s=""
-for c in S:
- if c<"{":s+=c
- else:d[p,c]=d[c,p]=p+" "+s+" "+c;p=c;s=""
-for a in sys.argv[1:]:print(d.get((*a,),"Tie"))
+for a in sys.argv[1:]:x,y=[ord(c)%79%5for c in a];d=(x-y)%5;print(*d and[a[d%2],"poisons smashes cuts covers crushes eats vaporizes decapitates disproves crushes".split()[(x,y,x+5,y+5,x)[d]],a[~d%2]]or["Tie"])

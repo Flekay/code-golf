@@ -1,8 +1,4 @@
 import sys
 for a in sys.argv[1:]:
- L=a.split('\n');w=L[0].split()
- for p in L[1:13]:
-  d={};f={}
-  for j in range(len(w)-1):
-   if w[j]==p:n=w[j+1];d[n]=d.get(n,0)+1;f.setdefault(n,j)
-  print(min(d,key=lambda x:(-d[x],f[x])))
+ t,*P=a.split('\n');w=t.split()
+ for p in P:print(max(s:=[y for x,y in zip(w,w[1:])if x==p],key=s.count))
