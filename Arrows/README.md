@@ -1,4 +1,14 @@
  Starting at [0, 0] print the cumulative result of applying each of the given Unicode arrow arguments. The arrows will be a random combination of these:
+ 
+[-1, -1] 	↙ U+2199, ↲ U+21B2, ⇙ U+21D9
+[-1,  0] 	← U+2190, ⇐ U+21D0, ⇦ U+21E6
+[-1,  1] 	↖ U+2196, ↰ U+21B0, ⇖ U+21D6
+[ 0, -1] 	↓ U+2193, ⇓ U+21D3, ⇩ U+21E9
+[ 0,  0] 	↔ U+2194, ↕ U+2195, ⇔ U+21D4, ⇕ U+21D5, ⥀ U+2940, ⥁ U+2941
+[ 0,  1] 	↑ U+2191, ⇑ U+21D1, ⇧ U+21E7
+[ 1, -1] 	↘ U+2198, ↳ U+21B3, ⇘ U+21D8
+[ 1,  0] 	→ U+2192, ⇒ U+21D2, ⇨ U+21E8
+[ 1,  1] 	↗ U+2197, ↱ U+21B1, ⇗ U+21D7
 
 {
     "↙": [-1, -1], "↲": [-1, -1], "⇙": [-1, -1],
