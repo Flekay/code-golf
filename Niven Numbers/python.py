@@ -1,2 +1,2 @@
 i=0
-while i<100:i+=1;i%(i//10+i%10)or print(i)
+while~99+i:i+=1;i%(i-i//10*9)or print(i)
