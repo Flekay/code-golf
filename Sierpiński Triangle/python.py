@@ -1,1 +1,1 @@
-for r in range(16):print(*(' '*(15-r-c*15)+' ▲'[~r&c<1]for c in range(r+1)))
+x=8**5;exec("print(f'{x:31b}'.translate(' ▲'*25));x=x//2^x*2;"*16)

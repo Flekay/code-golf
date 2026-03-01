@@ -1,3 +1,2 @@
-import sys
-r=sys.argv[1].split()+[''];R=range(32)
-for x in R:print(''.join('.#'[2<sum(r[x+d].count('#',~1%-~y,y+2)for d in(-1,0,1))<4+(r[x][y]<'.')]for y in R))
+import sys;P=' '*34;s=P+sys.argv[1]+P
+for i in range(34,1089):c=s[i];print(end=c*(c<'!')or'.#'[2-(c<'.')<sum(s[i+d-66]=='#'for d in b' !"ACbcd')<4])
