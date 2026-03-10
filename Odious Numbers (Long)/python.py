@@ -1,1 +1,2 @@
-[print(i)for i in range(999)if i.bit_count()%2]
+n=1
+while n<1e3:print(n);n=n+2^-(n+2^n)%3
