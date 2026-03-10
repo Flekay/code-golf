@@ -1,1 +1,1 @@
-for i in(R:=range(2,9999)):((I:=int(str(i)[::-1]))-i)*all((i%j)*(I%j)or j in(i,I)for j in R)and print(i)
+for i in range(9999):I=int(str(i)[::-1]);I^i>0<pow(140,~-i,i)*pow(140,~-I,I)<2==print(i)

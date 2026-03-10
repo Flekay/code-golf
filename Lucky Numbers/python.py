@@ -1,3 +1,2 @@
-*r,i=*range(1,8810,2),1
-while i-153:del r[r[i]-1::r[i]];i+=1
-*map(print,r),
+*r,=range(2,8810)
+for v in r:del r[v&~1::v];print(v-1|1)
