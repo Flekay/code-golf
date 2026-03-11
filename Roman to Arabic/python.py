@@ -1,2 +1,5 @@
 import sys
-for r in sys.argv[1:]:p=0;print(sum((v:=10**(-~q//2)>>q%2)-2*p*(p<(p:=v))for q in map('IVXLCDM'.find,r)))
+for s in sys.argv[1:]:
+ t=0
+ for r in s:n=10**'IXCMVLD'.find(r)%9995;t+=n-2*t%n
+ print(t)
